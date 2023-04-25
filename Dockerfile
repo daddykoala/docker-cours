@@ -1,26 +1,10 @@
-# Note cours docker #
-
-cmd pour lancer une image 
-
-````
-docker run [version de l'image] 
-```` 
-(possibilite d'aller chercher sur le docker hub des images preconstruites par les utilisateurs)
-
-
-utiliser la console de notre image 
-```
-docker run -it [version de l'image]
-```
- redaction d'un docker file 
-
- ````
- # ON UTILISE LE DOCKERFILE POUR CREER UNE IMAGE AVEC LES INSTRUCTIONS SUIVANTES
+# ON UTILISE LE DOCKERFILE POUR CREER UNE IMAGE AVEC LES INSTRUCTIONS SUIVANTES
 FROM node
 # ON DEFINIT LE REPERTOIRE DE TRAVAIL
 WORKDIR /app
 # ON COPIE LE FICHIER PACKAGE.JSON DANS LE REPERTOIRE DE TRAVAIL
 # le premier opoint est le chemin du fichier sur la machine locale et le deuxieme est le chemin du fichier dans le conteneur
+
 COPY . /app
 # ON INSTALLE LES DEPENDANCES               
 RUN npm install
@@ -29,4 +13,4 @@ EXPOSE 80
 # ON EXECUTE LA COMMANDE node server.js ?LA DIFFERENCE AVEC LA COMMANDE RUN EST QUE LA COMMANDE CMD EST EXECUTEE A LA CREATION DU CONTENEUR
 
 CMD ["node","server.js"]
- ````
+
