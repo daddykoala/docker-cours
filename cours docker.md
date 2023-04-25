@@ -30,3 +30,21 @@ EXPOSE 80
 
 CMD ["node","server.js"]
  ````
+
+ cmd pour voir tout les containers en cours 
+
+ `````
+ docker ps 
+
+ docker ps -a 
+ pour voir l'historique
+
+````
+
+cmd pour etre en mode détaché du container (attaché par defaut)
+
+````
+docker run -p 3000:80 -d [id]
+```
+
+````
